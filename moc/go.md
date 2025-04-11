@@ -52,6 +52,7 @@
   return that variable.
 - The comparable interface.
 - Underlying types.
+- Is it possible to write a method for a specific type?
 
 ### Interfaces
 
