@@ -53,6 +53,11 @@
 - The comparable interface.
 - Underlying types.
 - Is it possible to write a method for a specific type?
+- Is any an interface?
+- Type terms
+- How does type inference works whit generics?
+- Constants limits?
+- In most cases generic functions are actually faster than interface based.
 
 ### Interfaces
 
