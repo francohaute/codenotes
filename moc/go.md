@@ -59,6 +59,15 @@
 - Constants limits?
 - In most cases generic functions are actually faster than interface based.
 
+### Errors
+
+- The two ways to create an error from a string.
+- Sentinel errors.
+- When using custom errors never define a variable using the custom type. Instead 
+  use error or return nil.
+- Wrapping errors
+
+
 ### Interfaces
 
 - What does it mean that interfaces are implicit?
@@ -68,6 +77,7 @@
   each parameter. So, you have to make a choice between better abstraction and 
   better performance.
 - Empty interfaces and any. Avoid it.
+- Nil is the zero value for any interface type.
 
 ### iota
 
