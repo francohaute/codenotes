@@ -65,7 +65,19 @@
 - Sentinel errors.
 - When using custom errors never define a variable using the custom type. Instead 
   use error or return nil.
-- Wrapping errors
+- Wrapping errors: 
+  - When to use Is? When to declare?
+  - What is the purpose of As?
+  - It requires reflection.
+  - Use Is when looking for specific value or instance. Use as when looking for 
+    type.
+  - Defer function.
+- Panic and recover: 
+  - Once a panic happens only defer functions are run.
+  - You must use the defer function to try recover.
+  - The only recommended use of panic and recover is when making a library and you 
+    have a panic, so you recover and the return an error.
+- How to print a stack trace?
 
 
 ### Interfaces
@@ -181,3 +193,12 @@
 - best practices for when passing or not a pointer as parameter? And when returning 
   or not?
 
+## Modules
+
+- A module is a set of packages. Each module should have it's own repository.
+
+## Packages 
+
+- The name of a package is determined by it's package clause (the first line) and 
+  not by the import path.
+- Internal packages.
