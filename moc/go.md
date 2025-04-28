@@ -193,12 +193,42 @@
 - best practices for when passing or not a pointer as parameter? And when returning 
   or not?
 
-## Modules
+## Dependency management
 
-- A module is a set of packages. Each module should have it's own repository.
+### Packages
 
-## Packages 
+- A package is a directory that contains one or more go source files. Each package 
+  represents a compilation unit, wich means that they are compiled togheter. All 
+  files inside a directory should have the same package name at the top except 
+  for the main package.
+- The main package is intend to make executables.
+- The identifiers inside a package are available to another package (exported) 
+  only if the first letter is capitalized. The opposite case is unexported.
 
-- The name of a package is determined by it's package clause (the first line) and 
-  not by the import path.
-- Internal packages.
+### Modules
+
+- A module is a set of packages that are versioned togheter. It also declares the 
+  other modules it's depend on and their version. A directory of go files becomes 
+  a module in the presence of a go.mod file.
+- A module is defined by a go.mod file in wich it declares:
+    - Module path: is the module unique identifier. Typically the repo URL.
+    - Go version used by the module.
+    - Dependencies: list the modules path and their version.
+    - TODO: replace and exclude
+- Versioning:
+    - The go.mod specifies the minimum version.
+    - On go 1.21 the specification of the minimum version became mandatory. Before, 
+      when you try to build a module with a earlier version of the specified then 
+      it would try to do it but it could trhrow some error if the module uses some 
+      feature introduced in the newer versions. After 1.21, the go toolchain will 
+      refuse to build.
+    - In the case you are building with a newer version, there would be hardly any 
+      problem since go is completly backwards compatible. But you can experience 
+      subtle bugs or difference in performance.
+    - In the case of dependencies, if one needs a newer version of go then the 
+      toolchain will try to find a version that works. If it can't, then you would 
+      have a build error.
+    - Starting from 1.21, the toolchain can download the go version specified in 
+      the go.mod file if the installed go version is older.
+
+
