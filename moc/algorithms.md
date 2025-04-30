@@ -1,7 +1,5 @@
-# Algorithms
+# Algorithms and data structures
 
-- What is an algorithm? When is it correct?
-- Complexity:
-    - Big O
-    - Best case, average and worst
-   - 
+- What is an algorithm?
+
+

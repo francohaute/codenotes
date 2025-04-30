@@ -219,11 +219,11 @@
     - The go.mod specifies the minimum version.
     - On go 1.21 the specification of the minimum version became mandatory. Before, 
       when you try to build a module with a earlier version of the specified then 
-      it would try to do it but it could trhrow some error if the module uses some 
+      it would try to do it but it could throw some error if the module uses some 
       feature introduced in the newer versions. After 1.21, the go toolchain will 
       refuse to build.
     - In the case you are building with a newer version, there would be hardly any 
-      problem since go is completly backwards compatible. But you can experience 
+      problem since go is backwards compatible. But you can experience 
       subtle bugs or difference in performance.
     - In the case of dependencies, if one needs a newer version of go then the 
       toolchain will try to find a version that works. If it can't, then you would 
