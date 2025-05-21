@@ -204,6 +204,18 @@
 - The main package is intend to make executables.
 - The identifiers inside a package are available to another package (exported) 
   only if the first letter is capitalized. The opposite case is unexported.
+- The name of the package is determined by its clause and not by it's directory. 
+  But it is recommended to not use a name for the package different from the dir.
+- Alternate names. "." and hyphen.
+- GO DOC:
+    - Always put the identifier first.
+    - Use pkgsite to preview how the documentations would look.
+    - Use brackets to link to an identifier or to add text to an URL.
+- Internal:
+    - Share identifiers to the direct parent and direct sibling packages without 
+      exposing it to another module. Any other package that tries to access it 
+      will give a compilation error.
+    - The package name must be internal.
 
 ### Modules
 
@@ -230,5 +242,12 @@
       have a build error.
     - Starting from 1.21, the toolchain can download the go version specified in 
       the go.mod file if the installed go version is older.
+- Dependencies:
+    - Circular dependencies are a compile-time error.
+- Best practices:
+    - If the module is an application, put the main package at the root and all 
+      the logic in internal packages.
+    - If the module is a library, the root of the module should be a package whos 
+      name is the same as the repository. Don't use a hyphen in the name.
 
 
