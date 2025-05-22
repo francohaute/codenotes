@@ -24,6 +24,10 @@
 - Go encourage to not use getter and setter for everything (like java), just for 
   cases in wich you need to update multiple fields or when the update isn't a straight 
   assignment.
+- Package-level variables:
+    - Should be always inmutable.
+    - If one needs to be modified, you should try to put it in a struct that's 
+      initialiazed and returned by a function in the package.
 - method values and expressions.
 - Does golang has inheritance?
 - Types are executable documentation.
@@ -44,6 +48,7 @@
     - Check at compile time, except between slices and arrays.
 - Type switch.
 - When to use type assertion and conversion?
+- Alias for types.
 
 ### Generics
 
@@ -216,6 +221,13 @@
       exposing it to another module. Any other package that tries to access it 
       will give a compilation error.
     - The package name must be internal.
+- Init function:
+    - Run when one package is referenced by another package.
+    - Using _ when importing a package allows you to trigger the init function 
+      but does not give you access to any of the imported identifiers. (OBSOLETE)
+    - Always document the behavior of init functions.
+    - The primary usage of init functions is for initializing package-level variables 
+      that can't be configure in a single assignment.
 
 ### Modules
 
