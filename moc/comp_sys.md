@@ -1,14 +1,19 @@
 # Computer system 
 
+- [ ] The memory wall and how does memory (hardware) works
+
 ## [Kernel](../topics/comp_sys/kernel.md)
 
 - core component of an operating system
 - bridge between application and hardware
--
+- The kernel is not a process. Is the portion of the operating system code that 
+  is always resident in memory. Is a collection of data structures and code that 
+  the system uses to manage all the processes.
 
 
 
 ## Memory
+
 
 ### Virtual memory
 
