@@ -25,6 +25,10 @@
 - What is the purpose of the cache?
 
 
+## Information representation
+
+
+
 
 
 
