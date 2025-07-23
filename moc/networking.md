@@ -1,5 +1,7 @@
 # Computer networking
 
+TODO the 14KB rule
+
 - what is a socket?
 - how is the host identified? how is the socket in the host identified?
 - There are four different dimensions that a transport protocol can provide:
