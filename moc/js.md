@@ -40,7 +40,7 @@ TODO
     - only one operation can be performed on an undefined variable and is typeof.
     - the typeof return undefined on undeclared variables
 - It is recommended to always initialize variables so when typeof returns undefined 
-  you know is because the variable hasn't been defined.
+
 
 ## Data types
 
