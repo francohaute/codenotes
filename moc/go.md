@@ -256,6 +256,14 @@
       the go.mod file if the installed go version is older.
 - Dependencies:
     - Circular dependencies are a compile-time error.
+    - When working with modules that depends on different versions of another 
+      module, go will pick the minimum version that works for all. That is the 
+      highest specified version.
+    - When some dependency does not work with a newer version, it is a bug and 
+      the only solution is to contact the mantainer.
+    - Whe updating to compatible versions, you should first upgrade to the newest
+      patch of the minor version you are already using and. Then upgrade the 
+      minor version and then updating to the newest version.
 - Best practices:
     - If the module is an application, put the main package at the root and all 
       the logic in internal packages.
