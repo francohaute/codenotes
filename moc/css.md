@@ -56,3 +56,8 @@
 - How to package a optimize font (woff) [link](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 - Best practices for font rendering [link](https://web.dev/articles/font-best-practices)
 - Best practices for font size [link](https://web.dev/learn/design/typography)
+
+## Functions
+
+
+- min, max and clamp [link](https://web.dev/articles/min-max-clamp)
