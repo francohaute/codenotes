@@ -59,5 +59,13 @@
 
 ## Functions
 
-
 - min, max and clamp [link](https://web.dev/articles/min-max-clamp)
+
+## Custom properties
+
+- How does inheritance works? What is the default?
+- What are valid reasons to limit the scope of a property?
+- How to define multiple fallbaacks?
+- @property at rule: [docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@property)
+    - What are the advantages vs a regular declaration?
+- When is a property considered invalid? How does the browser deals with it?
