@@ -2,12 +2,12 @@
 
 ## LOG
 
+- [ ] StringBuilder
 - [ ] streams
 - [ ] Threads
 - [ ] Logging
 - [ ] Testing
 - [ ] ProcessBuilder
-- [ ] Lanterna and picocli for making command line programs
 
 ### Enums
 

@@ -28,3 +28,7 @@
 ## Clean Architecture
 
 - 
+
+## Memory management
+
+- escaping references and defensive copying (deep copy)
